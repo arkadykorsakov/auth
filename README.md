@@ -1,35 +1,64 @@
-# jwt-vue3
+# Приложение для авторизации на Vue 3  
 
-This template should help get you started developing with Vue 3 in Vite.
+**Vue 3 Authentication App** — это базовое приложение для реализации системы авторизации с использованием **Vue 3**. Оно поддерживает регистрацию, вход в систему, выход и защиту маршрутов.  
 
-## Recommended IDE Setup
+## Возможности  
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **Регистрация:** Создание нового пользователя с проверкой данных.  
+- **Вход:** Аутентификация пользователя.  
+- **Выход:** Завершение сеанса пользователя.  
+- **Защита маршрутов:** Доступ к защищенным маршрутам только для авторизованных пользователей.  
+- **Обработка ошибок:** Уведомления о неверных данных входа или регистрации.  
 
-## Customize configuration
+## Используемые технологии  
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Frontend:** Vue 3, Vue Router, Pinia (для управления состоянием).  
+- **Backend:** Любой API с поддержкой аутентификации (например, Firebase, Express).  
 
-## Project Setup
+## Установка и запуск  
 
-```sh
-npm install
-```
+### Предварительные требования  
 
-### Compile and Hot-Reload for Development
+- Node.js (рекомендуется LTS-версия)  
+- npm или yarn  
 
-```sh
-npm run dev
-```
+### Установка  
 
-### Compile and Minify for Production
+1. Клонируйте репозиторий:  
+   ```bash  
+   git clone https://github.com/arkadykorsakov/auth.git  
+   cd auth  
+   ```  
 
-```sh
-npm run build
-```
+2. Установите зависимости:  
+   ```bash  
+   npm install  
+   ```  
 
-### Lint with [ESLint](https://eslint.org/)
+### Запуск приложения  
 
-```sh
-npm run lint
-```
+Для разработки:  
+```bash  
+npm run dev  
+```  
+
+Для сборки:  
+```bash  
+npm run build  
+```  
+
+## Основные страницы  
+
+### `/register` (Регистрация)  
+- Форма для создания нового пользователя с проверкой:  
+  - Email  
+  - Пароль.  
+
+### `/login` (Вход)  
+- Форма для входа в систему.  
+
+## Использование  
+
+1. Зарегистрируйтесь на странице `/register`.  
+2. Войдите в систему на странице `/login`.  
+3. После входа получите доступ к защищенным страницам, таким как `/cars`.  
